@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wuyixiao123</title>
+<meta name="description" content="wuyixiao123 的个人主页：代码、Minecraft、还有一堆没做完的点子。">
+<style>
+:root {
+  --bg: #0d1117;
+  --panel: #161b22;
+  --line: #30363d;
+  --text: #e6edf3;
+  --dim: #8b949e;
+  --accent: #58a6ff;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.7 -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+
+/* hero */
+.hero {
+  position: relative;
+  padding: 96px 24px 72px;
+  text-align: center;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("assets/hero-bg.jpg") center/cover no-repeat;
+  opacity: .5;
+  z-index: 0;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(13,17,23,.35) 0%, rgba(13,17,23,.85) 72%, var(--bg) 100%);
+  z-index: 1;
+}
+.hero > * { position: relative; z-index: 2; }
+.avatar {
+  width: 104px; height: 104px;
+  border-radius: 50%;
+  border: 3px solid rgba(88,166,255,.55);
+  box-shadow: 0 0 0 6px rgba(88,166,255,.10);
+  object-fit: cover;
+}
+h1 {
+  margin: 18px 0 6px;
+  font-size: 42px;
+  letter-spacing: -.5px;
+  font-weight: 700;
+}
+.tagline { margin: 0 auto; max-width: 520px; color: var(--dim); font-size: 15px; }
+.hero-links { margin-top: 22px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.btn {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--text);
+  font-size: 14px;
+  transition: border-color .15s, background .15s;
+}
+.btn:hover { border-color: var(--accent); background: rgba(88,166,255,.08); text-decoration: none; }
+
+/* sections */
+section { padding: 56px 0 8px; }
+h2 {
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--dim);
+  font-weight: 600;
+  margin: 0 0 20px;
+}
+
+/* projects */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 14px; }
+.card {
+  display: block;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px 20px;
+  color: var(--text);
+  transition: border-color .15s, transform .15s;
+}
+.card:hover { border-color: var(--accent); transform: translateY(-2px); text-decoration: none; }
+.card h3 { margin: 0 0 6px; font-size: 17px; font-weight: 600; }
+.card p { margin: 0; font-size: 13.5px; color: var(--dim); line-height: 1.6; }
+.card .meta { margin-top: 10px; font-size: 11.5px; color: #6e7681; letter-spacing: .3px; }
+
+/* tags */
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag {
+  padding: 5px 13px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--dim);
+}
+
+/* footer */
+footer {
+  margin-top: 64px;
+  padding: 28px 0 40px;
+  border-top: 1px solid var(--line);
+  color: #6e7681;
+  font-size: 13px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <img class="avatar" src="https://avatars.githubusercontent.com/u/196893813?v=4" alt="avatar">
+  <h1>wuyixiao123</h1>
+  <p class="tagline">写代码，玩 Minecraft，攒了一堆没做完的点子。<br>这里是我的落脚点。</p>
+  <div class="hero-links">
+    <a class="btn" href="https://github.com/wuyixiao123">GitHub</a>
+    <a class="btn" href="https://github.com/wuyixiao123?tab=repositories">全部仓库</a>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section>
+    <h2>在做的事</h2>
+    <div class="grid">
+      <a class="card" href="https://github.com/wuyixiao123/craftlens">
+        <h3>craftlens</h3>
+        <p>MC 存档的可视化工具，正在持续迭代。</p>
+        <div class="meta">Minecraft · 进行中</div>
+      </a>
+      <a class="card" href="https://github.com/wuyixiao123/AternosBot">
+        <h3>AternosBot</h3>
+        <p>托管在 Aternos 的 MC 服务器机器人。</p>
+        <div class="meta">Python · 工具</div>
+      </a>
+      <a class="card" href="https://github.com/wuyixiao123/dsh-skills">
+        <h3>dsh-skills</h3>
+        <p>给 DeepSeek Harness 写的两个技能：免费网页抓取、文生图。</p>
+        <div class="meta">DSH · 私有仓库</div>
+      </a>
+      <a class="card" href="https://github.com/wuyixiao123?tab=repositories">
+        <h3>更多</h3>
+        <p>还有一些零散的实验和玩具，都在仓库里。</p>
+        <div class="meta">全部仓库</div>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h2>工具箱</h2>
+    <div class="tags">
+      <span class="tag">Python</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">Minecraft</span>
+      <span class="tag">Redstone</span>
+      <span class="tag">DeepSeek Harness</span>
+      <span class="tag">Git</span>
+      <span class="tag">Linux</span>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap">Built with nothing but HTML, CSS and a little stubbornness.</div>
+</footer>
+
+</body>
+</html>
